@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nishan Hegde | Full Stack Developer · UI/UX Designer</title>
+    <meta name="description" content="Portfolio of Nishan Hegde — Full Stack Developer & UI/UX Designer crafting premium digital experiences with React, Django, and modern design tools.">
+    <meta name="keywords" content="Nishan Hegde, portfolio, developer, designer, full stack, UI UX, web developer, React, Django, Figma">
+    <meta name="author" content="Nishan Hegde">
+    <meta property="og:title" content="Nishan Hegde | Full Stack Developer & UI/UX Designer">
+    <meta property="og:description" content="Full Stack Developer & UI/UX Designer crafting premium digital experiences.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MQ2PL502D0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-MQ2PL502D0');
+    </script>
+</head>
+<body>
+    <!-- Cursor glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Floating particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo" id="nav-logo">
+                <span class="logo-bracket">&lt;</span>NH<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link" id="nav-about">About</a></li>
+                <li><a href="#skills" class="nav-link" id="nav-skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" id="nav-projects">Projects</a></li>
+                <li><a href="#experience" class="nav-link" id="nav-experience">Experience</a></li>
+                <li><a href="#certifications" class="nav-link" id="nav-certifications">Certifications</a></li>
+                <li><a href="#contact" class="nav-link" id="nav-contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-greeting reveal-up">
+                    <span class="greeting-line"></span>
+                    <span>Hello, I'm</span>
+                </div>
+                <h1 class="hero-name reveal-up" style="--delay: 0.1s">
+                    Nishan <span class="name-accent">Hegde</span>
+                </h1>
+                <div class="hero-roles reveal-up" style="--delay: 0.2s">
+                    <span class="role-prefix">I'm a</span>
+                    <div class="role-carousel" id="roleCarousel">
+                        <span class="role active">Full Stack Developer</span>
+                        <span class="role">UI/UX Designer</span>
+                        <span class="role">Software Developer</span>
+                        <span class="role">Creative Problem Solver</span>
+                    </div>
+                    <span class="typing-cursor">|</span>
+                </div>
+                <p class="hero-description reveal-up" style="--delay: 0.3s">
+                    MCA graduate from Manipal Institute of Technology with hands-on experience building
+                    full-stack applications, designing intuitive interfaces, and turning ideas into
+                    pixel-perfect, performance-driven digital products.
+                </p>
+                <div class="hero-cta reveal-up" style="--delay: 0.4s">
+                    <a href="#projects" class="btn btn-primary" id="hero-cta-projects">
+                        <span>View My Work</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                    <a href="#contact" class="btn btn-outline" id="hero-cta-contact">
+                        <span>Let's Talk</span>
+                    </a>
+                </div>
+                <div class="hero-stats reveal-up" style="--delay: 0.5s">
+                    <div class="stat">
+                        <span class="stat-number" data-count="4">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="5">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Certifications</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="20">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Design Solutions</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image reveal-up" style="--delay: 0.3s">
+                <div class="image-wrapper">
+                    <div class="image-glow"></div>
+                    <div class="image-border-animated"></div>
+                    <img src="profile.png?v=2" alt="Nishan Hegde — Full Stack Developer & UI/UX Designer" class="profile-img" id="profileImage">
+                    <div class="image-dots"></div>
+                </div>
+                <div class="floating-badge badge-1">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    <span>Full Stack</span>
+                </div>
+                <div class="floating-badge badge-2">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                    <span>UI/UX</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" id="scrollIndicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">Get To Know Me</span>
+                <h2 class="section-title">About <span class="accent">Me</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image reveal-left">
+                    <div class="about-img-wrapper">
+                        <img src="profile.png?v=2" alt="Nishan Hegde" class="about-img">
+                        <div class="about-img-border"></div>
+                        <div class="experience-badge">
+                            <span class="exp-number">MCA</span>
+                            <span class="exp-text">Manipal<br>Institute</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text reveal-right">
+                    <h3>A passionate developer & designer based in India</h3>
+                    <p>
+                        I'm a multi-disciplinary professional who thrives at the intersection of 
+                        design and development. With a Master's in Computer Applications from 
+                        Manipal Institute of Technology and a strong foundation from my BCA at 
+                        Mahatma Gandhi Memorial College, I bring both academic depth and real-world 
+                        project experience to every challenge.
+                    </p>
+                    <p>
+                        My journey spans full-stack development with React.js and Django, 
+                        mobile app engineering with Android SDK, and UI/UX design using Figma 
+                        and Adobe Creative Suite. I believe great products emerge when beautiful 
+                        design meets clean, efficient code — and I'm equipped to deliver both.
+                    </p>
+                    <div class="about-info-grid">
+                        <div class="info-item">
+                            <span class="info-icon">📍</span>
+                            <div>
+                                <span class="info-label">Location</span>
+                                <span class="info-value">Manipal, India</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🎓</span>
+                            <div>
+                                <span class="info-label">Education</span>
+                                <span class="info-value">MCA — MIT Manipal</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">💼</span>
+                            <div>
+                                <span class="info-label">Status</span>
+                                <span class="info-value">Open to Opportunities</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🌐</span>
+                            <div>
+                                <span class="info-label">Languages</span>
+                                <span class="info-value">English, Kannada</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="Nishan_Hegde_Resume_OnePage_Formatted.pdf" download class="btn btn-primary" id="about-cta">
+                        <span>Download CV</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">What I Do</span>
+                <h2 class="section-title">My <span class="accent">Skills</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <!-- Design & Creative -->
+                <div class="skill-category reveal-up" style="--delay: 0.1s">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrap">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+                        </div>
+                        <h3>Design & Creative</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Adobe Photoshop</span>
+                        <span class="skill-tag">Adobe Illustrator</span>
+                        <span class="skill-tag">Adobe XD</span>
+                        <span class="skill-tag">Premiere Pro</span>
+                        <span class="skill-tag">Canva</span>
+                        <span class="skill-tag">UI/UX Design</span>
+                        <span class="skill-tag">Wireframing</span>
+                        <span class="skill-tag">Prototyping</span>
+                        <span class="skill-tag">Typography</span>
+                    </div>
+                </div>
+                <!-- Languages -->
+                <div class="skill-category reveal-up" style="--delay: 0.2s">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrap">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        </div>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C / C++</span>
+                        <span class="skill-tag">SQL</span>
+                    </div>
+                </div>
+                <!-- Frameworks & Libraries -->
+                <div class="skill-category reveal-up" style="--delay: 0.3s">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrap">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        </div>
+                        <h3>Frameworks & Libraries</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Angular</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">Django REST Framework</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">Android SDK</span>
+                    </div>
+                </div>
+                <!-- Database & Cloud -->
+                <div class="skill-category reveal-up" style="--delay: 0.4s">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrap">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                        </div>
+                        <h3>Database & Cloud</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">SQLite</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">Oracle</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Microsoft Azure</span>
+                        <span class="skill-tag">Google Cloud (GCP)</span>
+                    </div>
+                </div>
+                <!-- Tools & Technologies -->
+                <div class="skill-category reveal-up" style="--delay: 0.5s">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrap">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                        </div>
+                        <h3>Tools & Technologies</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Android Studio</span>
+                        <span class="skill-tag">Git / GitHub</span>
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">Java Swing GUI</span>
+                    </div>
+                </div>
+                <!-- Soft Skills -->
+                <div class="skill-category reveal-up" style="--delay: 0.6s">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrap">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <h3>Soft Skills</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Problem Solving</span>
+                        <span class="skill-tag">Communication</span>
+                        <span class="skill-tag">Adaptability</span>
+                        <span class="skill-tag">Teamwork</span>
+                        <span class="skill-tag">Leadership</span>
+                        <span class="skill-tag">Critical Thinking</span>
+                        <span class="skill-tag">Time Management</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">My Work</span>
+                <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-filter reveal-up" style="--delay: 0.1s">
+                <button class="filter-btn active" data-filter="all" id="filter-all">All</button>
+                <button class="filter-btn" data-filter="fullstack" id="filter-fullstack">Full Stack</button>
+                <button class="filter-btn" data-filter="mobile" id="filter-mobile">Mobile</button>
+            </div>
+            <div class="projects-grid" id="projectsGrid">
+
+                <!-- Project 1: TestEase -->
+                <article class="project-card reveal-up" data-category="fullstack" style="--delay: 0.1s" id="project-1">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="--hue: 220">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 8l3 3-3 3"/><path d="M13 14h4"/></svg>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" aria-label="View Project">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                            <a href="https://github.com/nishan-hegde" class="project-link" aria-label="View Code" target="_blank">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-date">Jan 2025 — Jun 2025</div>
+                        <h3>TestEase Web Application</h3>
+                        <p>Comprehensive examination management system with secure authentication, real-time processing, exam creation, candidate management, question bank, and automated result generation.</p>
+                        <div class="project-tech">
+                            <span>React.js</span>
+                            <span>Django REST</span>
+                            <span>PostgreSQL</span>
+                            <span>JWT</span>
+                            <span>OTP</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: Hegde Store -->
+                <article class="project-card reveal-up" data-category="fullstack" style="--delay: 0.2s" id="project-2">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="--hue: 160">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" aria-label="View Project">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                            <a href="https://github.com/nishan-hegde" class="project-link" aria-label="View Code" target="_blank">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-date">Feb 2026 — Present</div>
+                        <h3>Hegde Store — Digital Billing Platform</h3>
+                        <p>Full-stack retail management app for rural businesses with customer auth, credit/debit tracking, automated WhatsApp & SMS notifications, and bilingual Kannada/English interface.</p>
+                        <div class="project-tech">
+                            <span>HTML/CSS/JS</span>
+                            <span>Firebase</span>
+                            <span>Firestore</span>
+                            <span>WhatsApp API</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: Scissors Sound -->
+                <article class="project-card reveal-up" data-category="mobile" style="--delay: 0.3s" id="project-3">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="--hue: 280">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" aria-label="View Project">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                            <a href="https://github.com/nishan-hegde" class="project-link" aria-label="View Code" target="_blank">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-date">Jul 2023</div>
+                        <h3>Scissors Sound — Salon Management</h3>
+                        <p>Android application for salon bookings and management operations with digital tracking, appointment scheduling, and comprehensive mobile salon management capabilities.</p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>Android SDK</span>
+                            <span>HTML/CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4: Election Management -->
+                <article class="project-card reveal-up" data-category="mobile" style="--delay: 0.4s" id="project-4">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="--hue: 340">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="M9 14l2 2 4-4"/></svg>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" aria-label="View Project">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                            <a href="https://github.com/nishan-hegde" class="project-link" aria-label="View Code" target="_blank">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-date">Sep 2024</div>
+                        <h3>Election Management System</h3>
+                        <p>Android application for online elections with secure candidate registration, digital voting system, and automated result management with Firebase-backed real-time capabilities.</p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>XML</span>
+                            <span>SQLite</span>
+                            <span>Firebase</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">My Journey</span>
+                <h2 class="section-title">Education & <span class="accent">Experience</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <!-- Work Experience -->
+                <div class="timeline-item reveal-left" id="exp-1">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge-type work">Work</div>
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Software Development Intern</h3>
+                                <span class="timeline-company">Elogixa Technology</span>
+                            </div>
+                            <span class="timeline-date">Jan 2025 — Jun 2025</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Developed 'TestEase Web Application' for examination management serving business needs</li>
+                            <li>Implemented responsive frontend with React.js and intuitive interfaces enhancing user experience</li>
+                            <li>Built backend APIs using Django REST Framework for secure data management</li>
+                            <li>Integrated PostgreSQL for efficient storage of exam data and results</li>
+                            <li>Added security features like JWT authentication, OTP verification, and session management</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span>React.js</span>
+                            <span>Django REST</span>
+                            <span>PostgreSQL</span>
+                            <span>JWT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education: MCA -->
+                <div class="timeline-item reveal-right" id="exp-2">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge-type edu">Education</div>
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Master of Computer Applications</h3>
+                                <span class="timeline-company">Manipal Institute of Technology, Manipal</span>
+                            </div>
+                            <span class="timeline-date">Aug 2023 — Nov 2025</span>
+                        </div>
+                        <p>Advanced coursework in software engineering, database systems, cloud computing, and full-stack development with hands-on project experience.</p>
+                    </div>
+                </div>
+
+                <!-- Education: BCA -->
+                <div class="timeline-item reveal-left" id="exp-3">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge-type edu">Education</div>
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Bachelor of Computer Applications</h3>
+                                <span class="timeline-company">Mahatma Gandhi Memorial College, Udupi</span>
+                            </div>
+                            <span class="timeline-date">Sep 2020 — Aug 2023</span>
+                        </div>
+                        <p>CGPA: 7.49 — Strong foundation in computer science fundamentals, programming, data structures, and application development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section certifications" id="certifications">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">Credentials</span>
+                <h2 class="section-title">My <span class="accent">Certifications</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="cert-grid">
+                <div class="cert-card reveal-up" style="--delay: 0.1s" id="cert-1">
+                    <div class="cert-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Google UX Design Professional Certificate</h3>
+                        <span class="cert-issuer">Google — 2026</span>
+                        <p>Industry-recognized certification covering UX design principles, user research, wireframing, prototyping. Built 20+ hands-on design solutions with usability testing & interaction design.</p>
+                    </div>
+                    <div class="cert-badge">
+                        <span class="cert-badge-text">Google</span>
+                    </div>
+                </div>
+                <div class="cert-card reveal-up" style="--delay: 0.2s" id="cert-2">
+                    <div class="cert-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                    </div>
+                    <div class="cert-info">
+                        <h3>JavaScript Programming with React, Node & MongoDB</h3>
+                        <span class="cert-issuer">Specialization — 2025</span>
+                        <p>Mastered JavaScript ecosystem and cloud apps with key technologies and NoSQL databases for modern full-stack development.</p>
+                    </div>
+                    <div class="cert-badge">
+                        <a href="https://coursera.org/share/c81acd31938dfde881aa56df9a682908" target="_blank" class="cert-badge-text cert-link">View Certificate ↗</a>
+                    </div>
+                </div>
+                <div class="cert-card reveal-up" style="--delay: 0.3s" id="cert-3">
+                    <div class="cert-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Responsive Website Basics: HTML, CSS & JavaScript</h3>
+                        <span class="cert-issuer">University of London — Oct 2023</span>
+                        <p>Mastered responsive web design principles, modern frontend technologies with hands-on experience in HTML5, CSS3, and interactive JavaScript applications.</p>
+                    </div>
+                    <div class="cert-badge">
+                        <a href="https://coursera.org/share/a12e962f36f7b1f42de8b332d087d509" target="_blank" class="cert-badge-text cert-link">View Certificate ↗</a>
+                    </div>
+                </div>
+                <div class="cert-card reveal-up" style="--delay: 0.4s" id="cert-4">
+                    <div class="cert-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Python Data Structures</h3>
+                        <span class="cert-issuer">University of Michigan — Coursera</span>
+                        <p>Mastered data structure principles, file reading/writing, key/value storage with Python dictionaries, and multi-step tasks using tuples and loops.</p>
+                    </div>
+                    <div class="cert-badge">
+                        <a href="https://coursera.org/share/9c5c7db49bc351acda7589a30f232206" target="_blank" class="cert-badge-text cert-link">View Certificate ↗</a>
+                    </div>
+                </div>
+                <div class="cert-card reveal-up" style="--delay: 0.5s" id="cert-5">
+                    <div class="cert-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Mathematical Thinking in Computer Science</h3>
+                        <span class="cert-issuer">Coursera</span>
+                        <p>Developed mathematical reasoning and proof techniques essential for computer science, covering logic, combinatorics, and probability foundations.</p>
+                    </div>
+                    <div class="cert-badge">
+                        <a href="https://coursera.org/share/c81acd31938dfde881aa56df9a682908" target="_blank" class="cert-badge-text cert-link">View Certificate ↗</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Let's Work <span class="accent">Together</span></h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Have a project in mind or want to collaborate? I'd love to hear from you. Drop me a message and let's create something amazing.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info reveal-left">
+                    <div class="contact-card" id="contact-email">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:nishanhegde3@gmail.com">nishanhegde3@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-card" id="contact-phone">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:+919845110139">+91 98451 10139</a>
+                        </div>
+                    </div>
+                    <div class="contact-card" id="contact-location">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <h4>Location</h4>
+                            <span>Manipal, Karnataka, India</span>
+                        </div>
+                    </div>
+                    <div class="social-links" id="social-links">
+                        <a href="https://github.com/nishan-hegde" class="social-link" aria-label="GitHub" id="social-github" target="_blank">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/nishan-hegde" class="social-link" aria-label="LinkedIn" id="social-linkedin" target="_blank">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <a href="mailto:nishanhegde3@gmail.com" class="social-link" aria-label="Email" id="social-email">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form reveal-right" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="form-name" required placeholder=" ">
+                            <label for="form-name">Your Name</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="form-email" required placeholder=" ">
+                            <label for="form-email">Your Email</label>
+                            <div class="form-line"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="form-subject" required placeholder=" ">
+                        <label for="form-subject">Subject</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="form-message" rows="5" required placeholder=" "></textarea>
+                        <label for="form-message">Your Message</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit" id="form-submit">
+                        <span>Send Message</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#hero" class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>NH<span class="logo-bracket">/&gt;</span>
+                </a>
+                <p class="footer-text">Designed & built with ❤️ by Nishan Hegde</p>
+                <p class="footer-copyright">&copy; 2026 All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

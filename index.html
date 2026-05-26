@@ -659,26 +659,27 @@
                         </a>
                     </div>
                 </div>
-                <form class="contact-form reveal-right" id="contactForm">
+                <form class="contact-form reveal-right" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="e595e802-86fd-4ab0-b750-e6d94e0f085b">
                     <div class="form-row">
                         <div class="form-group">
-                            <input type="text" id="form-name" required placeholder=" ">
+                            <input type="text" id="form-name" name="name" required placeholder=" ">
                             <label for="form-name">Your Name</label>
                             <div class="form-line"></div>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="form-email" required placeholder=" ">
+                            <input type="email" id="form-email" name="email" required placeholder=" ">
                             <label for="form-email">Your Email</label>
                             <div class="form-line"></div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="form-subject" required placeholder=" ">
+                        <input type="text" id="form-subject" name="subject" required placeholder=" ">
                         <label for="form-subject">Subject</label>
                         <div class="form-line"></div>
                     </div>
                     <div class="form-group">
-                        <textarea id="form-message" rows="5" required placeholder=" "></textarea>
+                        <textarea id="form-message" name="message" rows="5" required placeholder=" "></textarea>
                         <label for="form-message">Your Message</label>
                         <div class="form-line"></div>
                     </div>

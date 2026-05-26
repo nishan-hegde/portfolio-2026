@@ -187,23 +187,41 @@ document.addEventListener('DOMContentLoaded', () => {
     // ── Form Handling ──
     const contactForm = document.getElementById('contactForm');
 
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         const submitBtn = document.getElementById('form-submit');
         const originalContent = submitBtn.innerHTML;
 
-        // Success animation
-        submitBtn.innerHTML = `
-            <span>Message Sent!</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-        `;
-        submitBtn.style.background = 'linear-gradient(135deg, #00d4aa, #00b894)';
+        // Show loading state
+        submitBtn.innerHTML = '<span>Sending...</span>';
+        
+        try {
+            const formData = new FormData(contactForm);
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            });
+
+            if (response.ok) {
+                // Success animation
+                submitBtn.innerHTML = `
+                    <span>Message Sent!</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                `;
+                submitBtn.style.background = 'linear-gradient(135deg, #00d4aa, #00b894)';
+                contactForm.reset();
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            submitBtn.innerHTML = '<span>Error Sending</span>';
+            submitBtn.style.background = '#ff4757';
+        }
 
         setTimeout(() => {
             submitBtn.innerHTML = originalContent;
             submitBtn.style.background = '';
-            contactForm.reset();
         }, 3000);
     });
 
